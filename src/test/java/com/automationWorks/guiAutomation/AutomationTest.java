@@ -17,10 +17,12 @@ public class AutomationTest {
 
 	@BeforeMethod
 	public void beforeMethod() {
-		ChromeOptions chromeOptions= new ChromeOptions();
-		chromeOptions.setBinary("D:\\Nitin\\eclipse-workspace\\guiAutomation\\browsers\\chromedriver.exe");
-		System.setProperty("webdriver.chrome.driver", "D:\\Nitin\\eclipse-workspace\\guiAutomation\\browsers\\chromedriver.exe");
-		driver = new ChromeDriver(chromeOptions);
+		//ChromeOptions chromeOptions= new ChromeOptions();
+		//chromeOptions.setBinary("D:\\Nitin\\eclipse-workspace\\guiAutomation\\browsers\\chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", "D:\\Nitin\\eclipse-workspace\\guiAutomation\\browsers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "browsers\\chromedriver.exe");
+		System.out.println(System.getProperty("user.dir"));
+		driver = new ChromeDriver();
 		driver.manage().window().fullscreen();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
