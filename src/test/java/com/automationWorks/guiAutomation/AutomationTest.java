@@ -14,7 +14,8 @@ import org.testng.annotations.AfterMethod;
 public class AutomationTest {
 
 	public static WebDriver driver;
-	public static int abc = 10;
+	int abc = 10;
+	private String str = "testsdf";
 
 	@BeforeMethod
 	public void beforeMethod() {
@@ -30,6 +31,7 @@ public class AutomationTest {
 		System.out.println("beforeMethod finished");
 		System.out.println("Text 1");
 		System.out.println("Text 2");
+		driver.navigate().to("http://www.hotmail.com");
 	}
 
 	@AfterMethod
