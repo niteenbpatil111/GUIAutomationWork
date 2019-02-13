@@ -14,6 +14,7 @@ import org.testng.annotations.AfterMethod;
 public class AutomationTest {
 
 	public static WebDriver driver;
+	public static int abc = 10;
 
 	@BeforeMethod
 	public void beforeMethod() {
