@@ -21,7 +21,6 @@ import org.testng.annotations.AfterTest;
 public class AutomationTest2 {
 
 	public static WebDriver driver;
-	public DesiredCapabilities dr = null;
 
 	@BeforeTest
 	public void beforeMethod() throws MalformedURLException {
