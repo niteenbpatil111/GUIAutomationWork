@@ -19,9 +19,6 @@ public class AutomationTest {
 
 	@BeforeMethod
 	public void beforeMethod() {
-		//ChromeOptions chromeOptions= new ChromeOptions();
-		//chromeOptions.setBinary("D:\\Nitin\\eclipse-workspace\\guiAutomation\\browsers\\chromedriver.exe");
-		//System.setProperty("webdriver.chrome.driver", "D:\\Nitin\\eclipse-workspace\\guiAutomation\\browsers\\chromedriver.exe");
 		System.out.println("<<<<<<<<<<<<<<<<<<<<<<<<<" + System.getProperty("user.dir") + ">>>>>>>>>>>>>>>>>>");
 		System.setProperty("webdriver.chrome.driver", "browsers\\chromedriver.exe");
 		driver = new ChromeDriver();
