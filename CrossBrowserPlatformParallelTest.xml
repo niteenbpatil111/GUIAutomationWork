@@ -1,0 +1,48 @@
+<suite name="Test Suite" verbose="1" thread-count="4" parallel="tests">
+	<tests name="ParallelTests">
+		<test name="Windows+Chrome">
+			<parameters>
+				<parameter name="platform" value="Windows8"></parameter>
+				<parameter name="browser" value="Chrome"></parameter>
+				<parameter name="deviceName" value=""></parameter>
+			</parameters>
+			<classes>
+				<class
+					name="com.automationWorks.guiAutomation.AutomationTestOnBrowserStack" />
+			</classes>
+		</test>
+		<test name="Windows+Firefox">
+			<parameters>
+				<parameter name="platform" value="Windows10"></parameter>
+				<parameter name="browser" value="Firefox"></parameter>
+				<parameter name="deviceName" value=""></parameter>
+			</parameters>
+			<classes>
+				<class
+					name="com.automationWorks.guiAutomation.AutomationTestOnBrowserStack" />
+			</classes>
+		</test>
+		<test name="iOS+safari">
+			<parameters>
+				<parameter name="platform" value="iOS"></parameter>
+				<parameter name="browser" value="Safari"></parameter>
+				<parameter name="deviceName" value="iPhone7"></parameter>
+			</parameters>
+			<classes>
+				<class
+					name="com.automationWorks.guiAutomation.AutomationTestOnBrowserStack" />
+			</classes>
+		</test>
+		<test name="Samsung+android">
+			<parameters>
+				<parameter name="platform" value="Android"></parameter>
+				<parameter name="browser" value="android"></parameter>
+				<parameter name="deviceName" value="SamsungGalaxyS7"></parameter>
+			</parameters>
+			<classes>
+				<class
+					name="com.automationWorks.guiAutomation.AutomationTestOnBrowserStack" />
+			</classes>
+		</test>
+	</tests>
+</suite>
