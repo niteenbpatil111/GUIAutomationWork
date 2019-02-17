@@ -5,7 +5,7 @@ pipeline{
 			steps{
 				withMaven(maven : 'apache-maven-3.6.0')
 				{
-					sh 'mvn clean'
+					sh "mvn clean"
 				}
 			}
 		}		
