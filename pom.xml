@@ -59,6 +59,9 @@
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>3.8.0</version>
 					<configuration>
+						<fork>true</fork>
+						<meminitial>1024m</meminitial>
+						<maxmem>2024m</maxmem>
 						<source>${jdk.level}</source>
 						<target>${jdk.level}</target>
 					</configuration>
