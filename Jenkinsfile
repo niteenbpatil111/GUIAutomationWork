@@ -5,7 +5,7 @@ pipeline{
 			steps{
 				withMaven(maven : 'apache-maven-3.6.0')
 				{
-					sh "mvn clean"
+					bat 'mvn clean'
 				}
 			}
 		}		
@@ -13,7 +13,7 @@ pipeline{
 			steps{
 				withMaven(maven : 'apache-maven-3.6.0')
 				{
-					sh 'mvn compile'
+					bat 'mvn compile'
 				}
 			}
 		}
@@ -21,7 +21,7 @@ pipeline{
 			steps{
 				withMaven(maven : 'apache-maven-3.6.0')
 				{
-					sh 'mvn test'
+					bat 'mvn test'
 				}
 			}
 		}
@@ -29,7 +29,7 @@ pipeline{
 			steps{
 				withMaven(maven : 'apache-maven-3.6.0')
 				{
-					sh 'mvn deploy'
+					bat 'mvn deploy'
 				}
 			}
 		}
