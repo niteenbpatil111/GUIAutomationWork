@@ -1,0 +1,77 @@
+<suite name="Parallel Tests" verbose="1" thread-count="3"
+	parallel="tests">
+	<tests name="My Parallel Test Example">
+		<test name="Windows+firefox Test1">
+			<parameters>
+				<parameter name="browser" value="Firefox" />
+			</parameters>
+			<classes>
+				<class
+					name="com.automationWorks.guiAutomation.AutomationTestThreadLocal"></class>
+			</classes>
+		</test>
+		<test name="Windows+firefox Test2">
+			<parameters>
+				<parameter name="browser" value="Firefox" />
+			</parameters>
+			<classes>
+				<class
+					name="com.automationWorks.guiAutomation.AutomationTestThreadLocal"></class>
+			</classes>
+		</test>
+		<test name="Windows+firefox Test3">
+			<parameters>
+				<parameter name="browser" value="Chrome" />
+			</parameters>
+			<classes>
+				<class
+					name="com.automationWorks.guiAutomation.AutomationTestThreadLocal"></class>
+			</classes>
+		</test>
+		<test name="Windows+firefox Test4">
+			<parameters>
+				<parameter name="browser" value="Chrome" />
+			</parameters>
+			<classes>
+				<class
+					name="com.automationWorks.guiAutomation.AutomationTestThreadLocal"></class>
+			</classes>
+		</test>
+		<test name="Windows+firefox Test5">
+			<parameters>
+				<parameter name="browser" value="Firefox" />
+			</parameters>
+			<classes>
+				<class
+					name="com.automationWorks.guiAutomation.AutomationTestThreadLocal"></class>
+			</classes>
+		</test>
+		<test name="Windows+firefox Test6">
+			<parameters>
+				<parameter name="browser" value="Firefox" />
+			</parameters>
+			<classes>
+				<class
+					name="com.automationWorks.guiAutomation.AutomationTestThreadLocal"></class>
+			</classes>
+		</test>
+		<test name="Windows+firefox Test7">
+			<parameters>
+				<parameter name="browser" value="Chrome" />
+			</parameters>
+			<classes>
+				<class
+					name="com.automationWorks.guiAutomation.AutomationTestThreadLocal"></class>
+			</classes>
+		</test>
+		<test name="Windows+firefox Test8">
+			<parameters>
+				<parameter name="browser" value="Chrome" />
+			</parameters>
+			<classes>
+				<class
+					name="com.automationWorks.guiAutomation.AutomationTestThreadLocal"></class>
+			</classes>
+		</test>
+	</tests>
+</suite>

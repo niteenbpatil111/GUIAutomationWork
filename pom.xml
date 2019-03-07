@@ -29,6 +29,16 @@
 			<artifactId>selenium-java</artifactId>
 			<version>3.14.0</version>
 		</dependency>
+		<dependency>
+			<groupId>org.sonarsource.scanner.maven</groupId>
+			<artifactId>sonar-maven-plugin</artifactId>
+			<version>3.3.0.603</version>
+		</dependency>
+		<dependency>
+			<groupId>com.relevantcodes</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>2.41.2</version>
+		</dependency>
 	</dependencies>
 	<profiles>
 		<profile>
@@ -43,6 +53,63 @@
 							<configuration>
 								<suiteXmlFiles>
 									<suiteXmlFile>GridTest.xml</suiteXmlFile>
+								</suiteXmlFiles>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+		<profile>
+			<id>TestOnDocker</id>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>2.22.1</version>
+							<configuration>
+								<suiteXmlFiles>
+									<suiteXmlFile>DockerTest.xml</suiteXmlFile>
+								</suiteXmlFiles>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+		<profile>
+			<id>TestOnBrowserStack</id>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>2.22.1</version>
+							<configuration>
+								<suiteXmlFiles>
+									<suiteXmlFile>BrowserStackCrossPlatformBrowserExecution.xml</suiteXmlFile>
+								</suiteXmlFiles>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+		<profile>
+			<id>ThreadLocalParallelExecution</id>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>2.22.1</version>
+							<configuration>
+								<suiteXmlFiles>
+									<suiteXmlFile>ThreadLocalForParallelExecution.xml</suiteXmlFile>
 								</suiteXmlFiles>
 							</configuration>
 						</plugin>

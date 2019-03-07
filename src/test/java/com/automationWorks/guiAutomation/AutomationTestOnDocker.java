@@ -21,9 +21,12 @@ import org.testng.annotations.AfterTest;
 /**
  * 
  * @author Nitin_Patil
- *	This test is to verify the execution using GRID
- */
-public class AutomationTestOnGRID {
+ * This test is to explore the test execution on Docker
+ * Prequisite for this: Docker Server should be running, latest selenium/hub, selenium/nodes for firefox and chorme etc.
+ * images should be installed
+ * 
+ * */
+public class AutomationTestOnDocker {
 
 	public static WebDriver driver;
 
@@ -31,18 +34,20 @@ public class AutomationTestOnGRID {
 	public void beforeTest() throws MalformedURLException {
 
 		DesiredCapabilities caps = new DesiredCapabilities();
-		caps = DesiredCapabilities.firefox();
-		caps.setPlatform(Platform.WINDOWS);
+		caps = DesiredCapabilities.chrome();
+		caps.setPlatform(Platform.LINUX);
 
 		System.out.println("<<<<<<<<<<<<<<<<<<<<<<<<<" + System.getProperty("user.dir") + ">>>>>>>>>>>>>>>>>>");
 
 		try {
-			driver = new RemoteWebDriver(new URL("http://192.168.0.100:4444/wd/hub"), caps);
+			//driver = new RemoteWebDriver(new URL("http://192.168.0.100:4444/wd/hub"), caps);
+			//Below link is to run the test case 
+			driver = new RemoteWebDriver(new URL("http://localhost:4446/wd/hub"), caps);
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}
 
-		driver.manage().window().fullscreen();
+		//driver.manage().window().fullscreen();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 	}

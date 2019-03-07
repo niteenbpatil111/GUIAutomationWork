@@ -13,7 +13,7 @@ import org.testng.annotations.AfterMethod;
 
 public class AutomationTest {
 
-	public static WebDriver driver;
+	private static WebDriver driver;
 	private String str = "testsdf";
 
 	@BeforeMethod
